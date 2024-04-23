@@ -1,0 +1,29 @@
+body {
+    background: rgb(22, 80, 10);
+    font: normal 15pt arial;
+    color: white;
+    text-align: center;
+}
+
+header{
+    font-weight: bolder;
+}
+
+section{
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    color: black;
+    width: 500px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.568) ;
+}
+
+select#lista{
+    margin-top: 20px;
+    width: 200px;
+}
+
+footer{
+   font-style: italic; 
+}
