@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento DOM</title>
+    
+    <style>
+        div#area{
+            background: rgb(109, 41, 41);
+            color: white;
+            font: normal 18pt Arial;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="area">
+        <!--  onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()" -->
+        Interagir
+    </div>
+
+    <script>
+        var a = document.getElementById('area')
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+
+        function clicar(){
+            a.innerText = 'Clicou'
+            a.style.background = 'blue'
+        }
+        function entrar(){
+            a.innerText = 'Entrou'
+            a.style.background = 'green'
+        }
+        function sair(){
+            a.innerText = 'Sair'
+            a.style.background = 'rgb(109, 41, 41)'
+        }
+    </script>
+
+</body>
+
+</html>
