@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quinto</title>
+    
+    <style>
+        body{
+            background-color: black;
+            color: white;
+            font: normal 16pt Arial;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>DOM (Document Object Model)</h1>
+    <p>Resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div class="msg">Clique!</div> <!-- div = # / class = . -->
+
+    <script> 
+    var corpo = window.document.body
+    var p1 = document.getElementsByTagName('p')[1]
+
+
+    /*var d = document.getElementById('msg')    
+    d.style.background = 'green'
+    d.innerText = 'Estou sendo Clicado'*/
+
+    /*var d = document.getElementsByName('msg')[0]
+    d.innerText = 'Olá'*/
+
+    var d = document.querySelector('div.msg') // div = # / class = .
+    d.style.color = 'blue'
+    </script>
+
+</body>
+
+</html>
