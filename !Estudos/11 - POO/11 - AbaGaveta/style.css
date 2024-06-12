@@ -1,0 +1,114 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    border: none;
+    box-sizing: border-box;
+    font-size: large;
+}
+
+.calc{
+    position: absolute;
+    left: -300px;
+    transition: all 0.3s;
+}
+.Dflex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calcExibir{
+    left: 0px !important;
+    transition: all 0.3s;
+}
+
+.principal{
+    flex-direction: column;
+    background-color: #eee;
+    border: 3px solid black;
+    width: 300px;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 40px;
+    padding: 5px;
+    
+}
+
+/*TITULO*/
+.div_nome{
+    margin: 20px;
+    font-style: italic;
+}
+
+/*DISPLAY*/
+
+.div_display{
+    width: 200px;
+}
+
+.display{
+    width: 200px;
+    height: 30px;
+    margin-bottom: 15px;
+    background-color: #2c0b52;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    font-family: monospace;
+    text-align: right;
+    padding: 5px;
+}
+
+.div_teclas{
+    width: 200px;
+    flex-wrap: wrap;
+}
+
+.tecla{
+    background-color: #aaa;
+    border: 3px solid #888;
+    font-weight: bold;
+    border-radius: 10px;
+    margin: 2px;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+}
+
+.teclaOP{
+    background-color: #575757 !important;
+    border: 3px solid black !important;
+    color: white !important;
+}
+
+.res{
+    background-color: #262f81 !important;
+    color: white !important;
+}
+
+.on{
+    background-color: #910000 !important;
+    color: white !important;
+}
+
+.esp{
+    background-color: #575757 !important;
+    border: 3px solid black !important;
+    color: white !important;
+}
+
+.abaCalc{
+    width: 30px;
+    height: 50px;
+    background-color: #eee;
+    border-radius: 0px 8px 8px 0px;
+    color: white;
+    border: 1px solid black;
+    font-weight: bold;
+}
+
+#direita{
+    height: 30px;
+    width: 30px;
+
+}
