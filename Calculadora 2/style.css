@@ -1,0 +1,88 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    border: none;
+    box-sizing: border-box;
+    font-size: large;
+}
+
+
+.Dflex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.principal{
+    flex-direction: column;
+    background-color: #eee;
+    border: 3px solid black;
+    width: 300px;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 40px;
+    padding: 5px;
+}
+
+/*TITULO*/
+.div_nome{
+    margin: 20px;
+    font-style: italic;
+}
+
+/*DISPLAY*/
+
+.div_display{
+    width: 200px;
+}
+
+.display{
+    width: 200px;
+    height: 30px;
+    margin-bottom: 15px;
+    background-color: #2c0b52;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    font-family: monospace;
+    text-align: right;
+    padding: 5px;
+}
+
+.div_teclas{
+    width: 200px;
+    flex-wrap: wrap;
+}
+
+.tecla{
+    background-color: #aaa;
+    border: 3px solid #888;
+    font-weight: bold;
+    border-radius: 10px;
+    margin: 2px;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+}
+
+.teclaOP{
+    background-color: #575757 !important;
+    border: 3px solid black !important;
+    color: white !important;
+}
+
+.res{
+    background-color: #262f81 !important;
+    color: white !important;
+}
+
+.on{
+    background-color: #910000 !important;
+    color: white !important;
+}
+
+.esp{
+    background-color: #575757 !important;
+    border: 3px solid black !important;
+    color: white !important;
+}

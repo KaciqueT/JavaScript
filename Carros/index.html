@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carros</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="criarCarro" class="criarCarro">
+        <div class="campoForm">
+            <label>Nome:</label>
+            <input type="text" name="nome" id="nome" value=" ">
+        </div>
+
+        <div class="campoForm">
+            <label>Portas:</label>
+            <input type="number" name="porta" id="porta" value=" ">
+        </div>
+
+        <div class="campoForm">
+            <label>Cor:</label>
+            <input type="text" name="cor" id="cor" value=" ">
+        </div>
+
+        <div class="campoForm">
+            <label>Blindagem:</label>
+            <input type="number" name="blindagem" id="blindagem" disabled value=" ">
+        </div>
+
+        <div class="campoForm">
+            <label>Munição:</label>
+            <input type="number" name="municao" id="municao" disabled value=" ">
+        </div>
+
+        <div class="carro">
+            <label>Tipo:</label>
+            <div class="radio">
+                <input type="radio" name="tipo" id="tipoMilitar" value="m">Militar
+            </div>
+            <div class="radio">
+                <input type="radio" name="tipo" id="tipoNormal" value="n" checked>Normal
+            </div>
+        </div>
+
+            <div class="campoForm">
+                <button id="btnAdd">Adicionar</button>
+                <button id="btnRem">Limpar</button>
+            </div>
+    </div>
+
+    <div id="carros" class="carros">
+
+    </div>
+
+        
+  
+    <script src="script.js"></script>
+</body>
+</html>
