@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validação</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <form>
+        <label>Nome</label>
+        <input id="nome" type="text" minlength="4" maxlength="8" required>
+        <label>Nota</label>
+        <input id="nota" type="number" min="0" max="10" required>
+        <button id="btnValidar">Validar</button>
+        <p id="msg"></p>
+    </form>
+
+    <script src="att.js"></script>
+</body>
+</html>

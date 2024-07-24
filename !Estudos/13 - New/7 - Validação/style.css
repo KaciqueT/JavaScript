@@ -1,0 +1,27 @@
+*{
+    border: none;
+    padding: 0px;
+    margin: 10px;
+    box-sizing: border-box;
+    
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+input{
+    border: 3px solid #aaa;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 10px;
+} 
+button{
+    background-color: gray;
+    padding: 5px 30px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+}
+

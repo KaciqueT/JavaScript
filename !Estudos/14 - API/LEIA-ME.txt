@@ -1,0 +1,1 @@
+Como ilustrei nas imagens, utilizei Node-red e Replit.com para fazer o banco de dados.

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chart</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div style="width: 400px; height: 400px;">
+        <canvas id="grafico" style="width: 400px; height: 400px;"></canvas>
+    </div>
+  
+    <script src="script.js"></script>
+    <script>
+        const ctx = document.getElementById('grafico');
+
+        let labelX = ["Disponibilidade", "Qualidade", "Performance"]
+        let valores = [0, 0, 0]
+      
+        let grafico = new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: labelX,//['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange']
+            datasets: [{
+              label: 'Dados do Servidor',
+              data: valores,//[12, 19, 3, 5, 2, 3]
+              borderWidth: 1
+            }]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+
+        const obterDados = () => {
+          const endpoint = "https://3e80496c-083f-4877-9075-cab09b8fe415-00-2p2mwsw5gusz.spock.replit.dev/"
+          fetch(endpoint)
+          .then(res => res.json())
+          .then(res => {
+            valores[0] = res.disponibilidade
+            valores[1] = res.qualidade
+            valores[2] = res.performance
+            grafico.update()
+          })
+          .catch(erro => {
+            console.log("ERRO: " + erro)
+          })
+        }
+
+        let intervalo = setInterval(obterDados, 2000)
+      </script>
+</body>
+</html>
