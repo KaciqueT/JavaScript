@@ -1,0 +1,72 @@
+*{
+    border: none;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+#form{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5px;
+    margin: 5px;
+    border: 3px solid #888;
+    background-color: #eee;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#campo{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 5px;
+}
+
+input[type = text]{
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+button{
+    background-color: antiquewhite;
+    border: 1px solid black;
+    padding: 10px 20px;
+    width: 100px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#listaCont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: 3px solid black;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 5px;
+    width: 700px;
+    height: 130px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contato{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px;
+}

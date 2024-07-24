@@ -1,0 +1,22 @@
+*{
+    border: none;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+}
+.math{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 300px;
+    background-color: whitesmoke;
+    padding: 10px;
+    border-radius: 5px;
+    border: 3px solid #888;
+    font-size: xx-large;
+    font-weight: bold;
+}

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form onsubmit="event.preventDefault()"> <!-- funciona quando o url ta fora de um form -->
+        <h1>Portfolio</h1>
+        <input type="url" name="url" id="url" placeholder="https://kaiquetsimitakis.my.canva.site/portfolio" pattern="https://.*" size="30" required>
+        <button id="btn">Ir</button>
+    </form>
+  
+    <script src="script.js"></script>
+</body>
+</html>

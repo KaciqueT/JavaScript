@@ -1,0 +1,27 @@
+*{
+    border: none;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    margin: 10px;
+}
+.objetos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px;
+    border: 3px solid #888;
+    background-color: #eee;
+}
+.computador{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+}

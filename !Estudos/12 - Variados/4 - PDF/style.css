@@ -1,0 +1,31 @@
+*{
+    border: none;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    margin: 10px;
+}
+body{
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;  
+}
+button{
+    background-color:wheat;
+    padding: 10px 30px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+button:hover{
+    outline: 3px solid red;
+}
+table{
+    width: 300px;
+    font: 17px Calibri;
+}
+table, th, td{
+    border: solid 1px #DDD;
+    padding: 2px 3px;
+    text-align: center;
+    border-collapse: collapse;
+}

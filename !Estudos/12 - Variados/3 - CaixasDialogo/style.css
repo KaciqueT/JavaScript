@@ -1,0 +1,22 @@
+*{
+    border: none;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+}
+body{
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;  
+}
+button{
+    background-color:wheat;
+    padding: 10px 30px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+button:hover{
+    outline: 3px solid red;
+}
