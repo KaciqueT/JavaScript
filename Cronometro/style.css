@@ -1,0 +1,48 @@
+*{
+    border: none;
+    padding: 0px;
+    margin: 10px;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;    
+}
+#divTimer{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+}
+#timer{
+    background-color: rgb(77, 76, 76);
+    border: 5px solid #aaa;
+    border-radius: 10px;
+    padding: 10px 20px;
+    color: #0f0;
+    display: flex;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+    justify-content: center;
+    width: inherit;
+}
+#dev{
+    font-style: italic;
+    font-size: 13px;
+}
+#titulo{
+    font-size: larger;
+    font-size: 30px;
+    width: 250px;
+    text-align: center;
+}
+#botoes{
+    display: flex;
+    justify-content: space-around;
+}
+.btn{
+    cursor: pointer;
+    background-color: #ccc;
+    border: 2px solid #aaa;
+    width: 100%;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+}
