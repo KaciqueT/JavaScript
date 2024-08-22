@@ -5,8 +5,8 @@ Estudarei desde o basico até o avançado.
 If até bibliotecas inteiras.
 Além de diversos projetos e sites prontos que deixarei destacado na primeira pagina do GitHub.
 
-Até o presente momento (24/07/2024) são:
-- 🌟 16 Projetos Finalizados;
+Até o presente momento (22/08/2024) são:
+- 🌟 17 Projetos Finalizados;
 - 📃 316 Arquivos;
 - 📁 96 Pastas;
 
