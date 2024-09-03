@@ -176,4 +176,3 @@ class Login{
     }
 
 }
-export {Login};
