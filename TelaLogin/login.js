@@ -137,24 +137,24 @@ class Login{
         const mat = document.querySelector("#f_nomeusuario").value;
         const pas = document.querySelector("#f_senhausuario").value;
 
-        const endpoint = `https://86607a0e-9c90-47c8-b094-7698f3fba1d7-00-3f98ywmplbdpb.janeway.replit.dev/?matricula=${mat}&senha=${pas}`;
+        const endpoint = `${this.config.endpoint}/?matricula=${mat}&senha=${pas}`;
 
         fetch(endpoint)
         .then(res => res.json())
         .then(res => {
 
             if(res){
-                this.logado = true;
-                this.matLogado = mat;
-                this.nomeLogado = res.nome;
-                this.acessoLogado = res.acesso;
+                sessionStorage.setItem("logado","true");
+                sessionStorage.setItem("matLogado",mat);
+                sessionStorage.setItem("nomeLogado",res.nome);
+                sessionStorage.setItem("acessoLogado",res.acesso);
                 this.callback_Ok();
                 this.fechar();
             }else{
-                this.logado = false;
-                this.matLogado = null;
-                this.nomeLogado = null;
-                this.acessoLogado = null;
+                sessionStorage.setItem("logado","false");
+                sessionStorage.setItem("matLogado","");
+                sessionStorage.setItem("nomeLogado","");
+                sessionStorage.setItem("acessoLogado","");
                 this.callback_NaoOk();
                 //alert("Login não efetuado! Nome ou Senha incorretos.");
             }
