@@ -1,0 +1,25 @@
+*{
+    border: none;
+    padding: 0px;
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+.btn_msg{
+    padding: 10px 40px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+#entrar{
+    padding: 10px 40px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#nome{
+    padding: 10px 40px;
+    border-radius: 5px;
+    color: white;
+}
