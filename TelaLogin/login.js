@@ -20,6 +20,12 @@ class Login{
     };
 
     static login = (callback_Ok, callback_NaoOk, config = null) => {
+
+        sessionStorage.setItem("logado","false");
+        sessionStorage.setItem("matLogado","");
+        sessionStorage.setItem("nomeLogado","");
+        sessionStorage.setItem("acessoLogado","");
+
         if(config != null){
             this.config = config;
         }
@@ -116,6 +122,10 @@ class Login{
         btnCancelar.setAttribute("id","btnCancelar");
         btnCancelar.innerHTML = "Cancelar";
         btnCancelar.addEventListener("click", (evt)=>{
+            sessionStorage.setItem("logado","false");
+            sessionStorage.setItem("matLogado","");
+            sessionStorage.setItem("nomeLogado","");
+            sessionStorage.setItem("acessoLogado","");            
             this.fechar();
         });
         botaoLogin.appendChild(btnCancelar);
