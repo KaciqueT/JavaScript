@@ -1,0 +1,276 @@
+[
+    {
+        "id": "b5b485dbc93b7250",
+        "type": "tab",
+        "label": "DataGridView",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "e3fd2d490fae3077",
+        "type": "http in",
+        "z": "b5b485dbc93b7250",
+        "name": "",
+        "url": "/produtos",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 310,
+        "y": 120,
+        "wires": [
+            [
+                "506cdfe9d010f5ad"
+            ]
+        ]
+    },
+    {
+        "id": "f40821e6f1d46e90",
+        "type": "http response",
+        "z": "b5b485dbc93b7250",
+        "name": "",
+        "statusCode": "",
+        "headers": {
+            "content-type": "application/json"
+        },
+        "x": 870,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "506cdfe9d010f5ad",
+        "type": "function",
+        "z": "b5b485dbc93b7250",
+        "name": "function 3",
+        "func": "let query = \"select * from produtos\";\nmsg.topic = query;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 120,
+        "wires": [
+            [
+                "3fa9a23b5859e78a"
+            ]
+        ]
+    },
+    {
+        "id": "3fa9a23b5859e78a",
+        "type": "mysql",
+        "z": "b5b485dbc93b7250",
+        "mydb": "d2fbdd988c55b4fb",
+        "name": "",
+        "x": 690,
+        "y": 120,
+        "wires": [
+            [
+                "f40821e6f1d46e90"
+            ]
+        ]
+    },
+    {
+        "id": "0e5328b7914b545f",
+        "type": "http in",
+        "z": "b5b485dbc93b7250",
+        "name": "",
+        "url": "/removeproduto/:id",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 280,
+        "y": 240,
+        "wires": [
+            [
+                "68d13afe3ff116d1"
+            ]
+        ]
+    },
+    {
+        "id": "68d13afe3ff116d1",
+        "type": "function",
+        "z": "b5b485dbc93b7250",
+        "name": "function 4",
+        "func": "let id=msg.req.params.id;\nlet query = `DELETE FROM produtos WHERE n_id_produto = ${id}`;\nmsg.topic = query;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 240,
+        "wires": [
+            [
+                "c80a6d1f2b2f4bb5"
+            ]
+        ]
+    },
+    {
+        "id": "c1e2403d92f0b128",
+        "type": "http response",
+        "z": "b5b485dbc93b7250",
+        "name": "",
+        "statusCode": "",
+        "headers": {
+            "content-type": "application/json"
+        },
+        "x": 870,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "c80a6d1f2b2f4bb5",
+        "type": "mysql",
+        "z": "b5b485dbc93b7250",
+        "mydb": "d2fbdd988c55b4fb",
+        "name": "",
+        "x": 690,
+        "y": 240,
+        "wires": [
+            [
+                "c1e2403d92f0b128"
+            ]
+        ]
+    },
+    {
+        "id": "506cca6e79dbdfb2",
+        "type": "http in",
+        "z": "b5b485dbc93b7250",
+        "name": "",
+        "url": "/produtos/:id",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 300,
+        "y": 180,
+        "wires": [
+            [
+                "a03948c62ec1201b"
+            ]
+        ]
+    },
+    {
+        "id": "44372c5bc4e47670",
+        "type": "http response",
+        "z": "b5b485dbc93b7250",
+        "name": "",
+        "statusCode": "",
+        "headers": {
+            "content-type": "application/json"
+        },
+        "x": 870,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "a03948c62ec1201b",
+        "type": "function",
+        "z": "b5b485dbc93b7250",
+        "name": "function 5",
+        "func": "let id=msg.req.params.id;\nlet query = `SELECT * FROM produtos WHERE n_id_produto = ${id}`;\nmsg.topic = query;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 180,
+        "wires": [
+            [
+                "9502ed828f28fa34"
+            ]
+        ]
+    },
+    {
+        "id": "9502ed828f28fa34",
+        "type": "mysql",
+        "z": "b5b485dbc93b7250",
+        "mydb": "d2fbdd988c55b4fb",
+        "name": "",
+        "x": 690,
+        "y": 180,
+        "wires": [
+            [
+                "44372c5bc4e47670"
+            ]
+        ]
+    },
+    {
+        "id": "91d8085abd5ac372",
+        "type": "http in",
+        "z": "b5b485dbc93b7250",
+        "name": "",
+        "url": "/updateproduto/:id/:produto/:marca/:modelo",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 200,
+        "y": 300,
+        "wires": [
+            [
+                "cba17731c06f7a88"
+            ]
+        ]
+    },
+    {
+        "id": "cba17731c06f7a88",
+        "type": "function",
+        "z": "b5b485dbc93b7250",
+        "name": "function 6",
+        "func": "let id=msg.req.params.id;\nlet produto=msg.req.params.produto;\nlet marca=msg.req.params.marca;\nlet modelo=msg.req.params.modelo;\nlet query = `UPDATE produtos SET s_nome_produto = \"${produto}\", s_marca_produto = \"${marca}\", s_modelo_produto = \"${modelo}\" WHERE n_id_produto = ${id}`;\n\nmsg.topic = query;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 300,
+        "wires": [
+            [
+                "6d6202cf665de1b8"
+            ]
+        ]
+    },
+    {
+        "id": "1ab477933e8b75a2",
+        "type": "http response",
+        "z": "b5b485dbc93b7250",
+        "name": "",
+        "statusCode": "",
+        "headers": {
+            "content-type": "application/json"
+        },
+        "x": 870,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "6d6202cf665de1b8",
+        "type": "mysql",
+        "z": "b5b485dbc93b7250",
+        "mydb": "d2fbdd988c55b4fb",
+        "name": "",
+        "x": 690,
+        "y": 300,
+        "wires": [
+            [
+                "1ab477933e8b75a2"
+            ]
+        ]
+    },
+    {
+        "id": "d2fbdd988c55b4fb",
+        "type": "MySQLdatabase",
+        "name": "",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "db": "datagridview",
+        "tz": "",
+        "charset": "UTF8"
+    }
+]

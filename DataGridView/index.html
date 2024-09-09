@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataGridView</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        
+    <div id="DGVProdutos" class="DGV">
+
+        <div id="DGVTitulos" class="DGVTitulos">
+            <div class="c1">ID:</div>
+            <div class="c2">Produto:</div>
+            <div class="c3">Marca:</div>
+            <div class="c4">Modelo:</div>
+            <div class="c5">Funções:</div>
+        </div>
+
+        <div id="DGVDados" class="DGVDados"></div>
+    </div>
+
+    <div id="janelaView" class="janelaView ocultar">
+        <div id="View" class="View">
+            <div class="campo">
+                <label>ID:</label>
+                <input type="text" name="f_id" id="f_id" readonly>
+            </div>
+            <div class="campo">
+                <label>Produto:</label>
+                <input type="text" name="f_produto" id="f_produto" readonly>
+            </div>
+            <div class="campo">
+                <label>Marca:</label>
+                <input type="text" name="f_marca" id="f_marca" readonly>
+            </div>
+            <div class="campo">
+                <label>Modelo:</label>
+                <input type="text" name="f_modelo" id="f_modelo" readonly>
+            </div>
+            <div id="rodape" class="campo rodape">
+                <button id="btnFechar" class="btn">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="janelaEditar" class="janelaView ocultar">
+        <div id="View" class="View">
+            <div class="campo">
+                <label>ID:</label>
+                <input type="text" name="f_id" id="f_idEditar" readonly>
+            </div>
+            <div class="campo">
+                <label>Produto:</label>
+                <input type="text" name="f_produto" id="f_produtoEditar" >
+            </div>
+            <div class="campo">
+                <label>Marca:</label>
+                <input type="text" name="f_marca" id="f_marcaEditar" >
+            </div>
+            <div class="campo">
+                <label>Modelo:</label>
+                <input type="text" name="f_modelo" id="f_modeloEditar" >
+            </div>
+            <div id="rodape" class="campo rodape">
+                <button id="btnEditar" class="btn">Salvar</button>
+                <button id="btnCancelar" class="btn">Cancelar</button>
+            </div>
+        </div>
+    </div>
+  
+    <script src="script.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+[
+    {
+        "id":"01",
+        "produto":"Processador",
+        "marca":"AMD",
+        "modelo":"Ryzen3 3200g"
+    },
+    {
+        "id":"02",
+        "produto":"Mouse",
+        "marca":"Logitech",
+        "modelo":"M90"
+    },
+    {
+        "id":"03",
+        "produto":"Monitor",
+        "marca":"Samsung",
+        "modelo":"Syncmaster"
+    },
+    {
+        "id":"04",
+        "produto":"Memória Ram",
+        "marca":"Random",
+        "modelo":"8gb DDR4"
+    },
+    {
+        "id":"05",
+        "produto":"Teclado",
+        "marca":"Aliexpress",
+        "modelo":"Teclado de Luizinha"
+    }
+]
