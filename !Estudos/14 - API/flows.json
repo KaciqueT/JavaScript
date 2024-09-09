@@ -1,0 +1,144 @@
+[
+    {
+        "id": "4b789eef1034c47f",
+        "type": "tab",
+        "label": "Fluxo 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "0e2dee2478d6febd",
+        "type": "http in",
+        "z": "4b789eef1034c47f",
+        "name": "",
+        "url": "/gravar",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 150,
+        "y": 100,
+        "wires": [
+            [
+                "e37c15e41281c021"
+            ]
+        ]
+    },
+    {
+        "id": "be8da6815bd0faf2",
+        "type": "http in",
+        "z": "4b789eef1034c47f",
+        "name": "",
+        "url": "/JS",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 140,
+        "y": 220,
+        "wires": [
+            [
+                "7e56c5b793ddf5b5"
+            ]
+        ]
+    },
+    {
+        "id": "e37c15e41281c021",
+        "type": "function",
+        "z": "4b789eef1034c47f",
+        "name": "function 1",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 100,
+        "wires": [
+            [
+                "ecfb8921e65b3611",
+                "f08e09a67bea6358"
+            ]
+        ]
+    },
+    {
+        "id": "7e56c5b793ddf5b5",
+        "type": "function",
+        "z": "4b789eef1034c47f",
+        "name": "function 2",
+        "func": "let dados = {\n      temperatura: Math.round(Math.random() * 30),\n      nivel: Math.round(Math.random() * 50),\n      pressao: Math.round(Math.random() * 30)\n    }\n\nmsg.payload = dados;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 220,
+        "wires": [
+            [
+                "491888608e920a42",
+                "ab4ba43fa25f9837"
+            ]
+        ]
+    },
+    {
+        "id": "491888608e920a42",
+        "type": "http response",
+        "z": "4b789eef1034c47f",
+        "name": "",
+        "statusCode": "",
+        "headers": {
+            "content-type": "application/json"
+        },
+        "x": 530,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "ecfb8921e65b3611",
+        "type": "http response",
+        "z": "4b789eef1034c47f",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 530,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "ab4ba43fa25f9837",
+        "type": "debug",
+        "z": "4b789eef1034c47f",
+        "name": "msg.payload",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 530,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "f08e09a67bea6358",
+        "type": "debug",
+        "z": "4b789eef1034c47f",
+        "name": "msg.payload",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 530,
+        "y": 160,
+        "wires": []
+    }
+]
